@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="plug_code_copy">
+				<input class="add_btn" value=""></input>
+				<button class="check_btn">确定</button>
+			</div>
+			<div id="html_content_pro"></div>
+		</div>
+		<iframe src="https://detail.tmall.com/item.htm?id=520775879264" width="500" height="500">
+			
+		</iframe>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="copy_js/popup.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).on("click", ".check_btn", function() {
+			var pro_id = $(".add_btn").val();
+			console.log(pro_id);
+			httpRequest('https://detail.tmall.com/item.htm?id=' + pro_id, function() {
+				var popup_take_code_txt = $('#detail').contents().find('[class="tb-detail-hd"]').find('h1').val();
+				console.log(popup_take_code_txt);
+				$('#html_content_pro').append(popup_take_code_txt);
+			});
+		});
+	</script>
+
+</html>

@@ -1,0 +1,56 @@
+{
+	"manifest_version": 2,
+	"name": "Tmall_plug",
+	"version": "1.0.0",
+	"description": "天猫插件",
+	"icons": {
+		"16": "img/logo.png",
+		"48": "img/logo.png",
+		"128": "img/logo.png"
+	},
+	"page_action": {
+		"default_title": "Plug_Tmall",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"tabs",
+		"activeTab",
+		"storage",
+		"unlimitedStorage",
+		"webRequest",
+		"webRequestBlocking",
+		"*://*.tmall.com/*",
+		"*://*.taobao.com/*",
+		"*://*.bootcss.com/*",
+		"*://*.junezx.com/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://siteadmin.tmall.com/design.htm*",
+				"*://siteadmin.taobao.com/design.htm*",
+				"*://siteadmin.tmall.com/preview.htm*",
+				"*://*.junezx.com/*"
+//				"*://*.tmall.com/*",
+//				"*://*.taobao.com/*"
+			],
+			"js": [
+				"js/jquery-1.11.1.min.js",
+				"js/Plug_Content.js"
+//				"js/move_pic.js",
+//				"js/jquery-ui.js"
+			],
+			"css": [
+				"css/plug.css"
+//				"css/dp_all.css"
+			],
+			"all_frames": true,
+			"run_at": "document_end"
+		}
+	],
+	"web_accessible_resources": [
+		"img/*.*",
+		"css/*.*",
+		"js/*.*"
+	]
+}
