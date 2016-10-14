@@ -1,0 +1,188 @@
+
+.time_box {
+	width: 25%;
+	height: 25px;
+	margin: 0 auto;
+	background-color: #293749;
+	text-align: center;
+	line-height: 25px;
+}
+.time_box *{
+	margin-left: 4px;
+	float: left;
+	color: #FF7F24;
+}
+#time_select {
+	padding: 3px;
+	margin-top: 10px;
+}
+
+#put_btn {
+	width: auto;
+	display: inline-block!important;
+	display: inline;
+	position: absolute;
+	top: 11%;
+	right: 30%;
+	line-height: 49px;
+	
+}
+#put_btn *{
+	margin-left: 3px;
+	float: left;
+}
+.plug_hide {
+	visibility: hidden;
+	opacity: 0;
+}
+#put_btn #time {
+	margin-top: 13px;;
+}
+#put_btn a {
+	display: block;
+	position: relative;
+	float: left;
+	width: auto;
+	padding: 7px;
+	border: 1px solid #cfcfcf;
+	height: 30px;
+	line-height: 30px;
+	color: #666;
+	text-decoration: none;
+	border-radius: 2px;
+	background: url(//gtms03.alicdn.com/tps/i3/TB1tjBhGXXXXXcXXVXXJ0Z..FXX-11-60.png) repeat-x 0 -30px;
+	cursor: pointer;
+}
+
+#will_post {
+	position: absolute;
+	left: 44%;
+	top: 44%;
+	width: 300px;
+	height: 150px;
+	background-color: #eee;
+	border: 2px solid #ccc;
+	border-radius: 3px;
+	z-index: 2;
+	
+}
+#will_post a {
+	text-decoration: none;
+}
+#will_post p {
+	position: relative;
+	top: 5px;
+	color: black;
+	font-family: '幼圆';
+	font-size: 14px;
+	text-align: center;
+}
+.tmall_put_message {
+	height: 14px;;
+}
+#will_post .fire {
+	cursor: pointer;
+	text-align: center;
+	padding: 5px;
+	color: black;
+	font-family: '幼圆';
+	font-size: 14px;
+	opacity: 1;
+	position: relative;
+	left: 13%;
+	top: 36px;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+}
+#will_post .fire:hover {
+	background-color: #87CEFA;
+	opacity: 0.8;
+}
+#will_post .tmall_put_cancel {
+	cursor: pointer;
+	text-align: center;
+	padding: 5px;
+	color: black;
+	font-family: '幼圆';
+	font-size: 14px;
+	opacity: 1;
+	position: relative;
+	left: 18%;
+	top: 36px;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+}
+#will_post .tmall_put_cancel:hover {
+	background-color: #FF4040;
+	opacity: 0.8;
+}
+
+#page .message_box {
+	padding: 15px;
+	border: 1px solid #eee;
+	border-radius: 3px;
+	position: absolute;
+	left: 48%;
+	top: 44%;
+	z-index: 99999;
+	transition: all 1s; 
+	opacity: 1;
+	background-color: #D19275;
+}
+
+#page #message {
+	padding: 7px;
+	background-color: #eee;
+}
+
+#page .message_close {
+	height: 13px;
+	width: 13px;
+	line-height: 12px;
+	text-align: center;
+	color: #1DA4B8;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+	padding: 1px;
+	background-color: #FF4040;
+}
+.input_data {
+	width: 30%;
+	padding: 8px;
+	background-color: #CD9B9B;
+	position: absolute;
+	top: 20%;
+	left: 35%;
+	z-index: 99999;
+}
+.input_data * {
+	margin-top: 2px;
+}
+.btn_box {
+	width: 65%;
+	margin: 0 auto;
+	text-align: center;
+}
+#to_ok {
+	width: 25%;
+	float: none;
+}
+#to_cancel {
+	width: 25%;
+	float: none;
+	margin-left: 2px;
+}
+.input_data label{
+	width: 25%;
+	padding: 5px;
+	text-align: center;
+	float: left;
+}
+.input_data input {
+	width: 65%;
+	padding: 5px;
+	float: left;
+}
+
