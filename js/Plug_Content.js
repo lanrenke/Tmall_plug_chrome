@@ -200,7 +200,7 @@ function take_post() {
 	//店铺首页发布ID		
 	var sid = '';
 	//店铺首页发布参数 这些值都是通过后台截取	
-	var tbToken = 'e66bde3734ed3';
+	var tbToken = '';
 	var r = {};
 
 	$.ajax({
