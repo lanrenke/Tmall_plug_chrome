@@ -196,9 +196,9 @@ function show_time() {
 }
 
 function take_post() {
-	//		var sid = $($('#J_TSwitchToOldContent').val()).find('[name="sid"]').attr('value');
-	var sid = '382213577';
-	//	var tbToken = $($('#J_TSwitchToOldContent').val()).find('[name="_tb_token_"]').attr('value');
+	//店铺首页发布ID		
+	var sid = '';
+	//店铺首页发布参数 这些值都是通过后台截取	
 	var tbToken = 'e66bde3734ed3';
 	var r = {};
 
