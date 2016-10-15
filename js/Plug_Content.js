@@ -42,6 +42,7 @@ $(document).on('click', '#set_time', function() {
 	var time_second = time.getSeconds(); //秒
 	switch(select_time) {
 		case 'select_null':
+			//这里的判断非常冗余，还没想到其他比较好的方法
 			if(time_month < 10) {
 				if(time_day < 10) {
 					var str = time_year + "/0" + time_month + "/0" + time_day + " " + time_hours + ":" + time_min + ":" + time_second;
