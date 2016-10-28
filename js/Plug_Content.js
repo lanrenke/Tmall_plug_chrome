@@ -47,7 +47,7 @@ $(document).on('click', '#set_time', function() {
 		case 'a_min':
 			//给一个判断，判断到每个小时的最后一分钟之后的时间不要出现不符合规范的时间值，如13:60:10
 			if(time_min == '59') {
-				var str = time_year + "/" + time_month + "/" + time_day + " " + (time_hours + 1) + ":" + "0" + ":" + time_second;
+				var str = time_year + "/" + time_month + "/" + time_day + " " + (parseFloat(time_hours) + 1) + ":" + "0" + ":" + time_second;
 			} else {
 				var str = time_year + "/" + time_month + "/" + time_day + " " + time_hours + ":" + (parseFloat(time_min) + 1) + ":" + time_second;
 			}
