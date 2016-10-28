@@ -147,9 +147,8 @@ function show_time() {
 }
 
 function take_post() {
-	//		var sid = $($('#J_TSwitchToOldContent').val()).find('[name="sid"]').attr('value');
+	//这里的店铺数据，可以通过后台截取。
 	var sid = '382213577';
-	//	var tbToken = $($('#J_TSwitchToOldContent').val()).find('[name="_tb_token_"]').attr('value');
 	var tbToken = 'e66bde3734ed3';
 	var r = {};
 
