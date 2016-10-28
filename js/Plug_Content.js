@@ -35,75 +35,25 @@ $(document).on('click', '#set_time', function() {
 	var select_time = $('#time_select').val();
 	var time = new Date();
 	var time_year = time.getFullYear(); //年
-	var time_month = time.getMonth() + 1; //月 月份是从0开始算的
-	var time_day = time.getDate(); //那一天
-	var time_hours = time.getHours(); //小时
-	var time_min = time.getMinutes(); //分
-	var time_second = time.getSeconds(); //秒
+	var time_month = time.getMonth() + 1 < 10 ? "0" + (time.getMonth() + 1) : time.getMonth() + 1; //月 月份是从0开始算的
+	var time_day = time.getDate() < 10 ? "0" + time.getDate() : time.getDate(); //那一天
+	var time_hours = time.getHours() < 10 ? "0" + time.getHours() : time.getHours(); //小时
+	var time_min = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes(); //分
+	var time_second = time.getSeconds() < 10 ? "0" + time.getSeconds() : time.getSeconds(); //秒
 	switch(select_time) {
 		case 'select_null':
-			//这里的判断非常冗余，还没想到其他比较好的方法
-			if(time_month < 10) {
-				if(time_day < 10) {
-					var str = time_year + "/0" + time_month + "/0" + time_day + " " + time_hours + ":" + time_min + ":" + time_second;
-				} else {
-					var str = time_year + "/0" + time_month + "/" + time_day + " " + time_hours + ":" + time_min + ":" + time_second;
-				}
-			} else {
-				if(time_day < 10) {
-					var str = time_year + "/" + time_month + "/0" + time_day + " " + time_hours + ":" + time_min + ":" + time_second;
-				} else {
-					var str = time_year + "/" + time_month + "/" + time_day + " " + time_hours + ":" + time_min + ":" + time_second;
-				}
-			}
+			var str = time_year + "/" + time_month + "/" + time_day + " " + time_hours + ":" + time_min + ":" + time_second;
 			break;
 		case 'a_min':
-			if(time_month < 10) {
-				if(time_day < 10) {
-					//给一个判断，判断到每个小时的最后一分钟之后的时间不要出现不符合规范的时间值，如13:60:10
-					if(time_min == '59') {
-						var str = time_year + "/0" + time_month + "/0" + time_day + " " + (time_hours + 1) + ":" + "0" + ":" + time_second;
-					} else {
-						var str = time_year + "/0" + time_month + "/0" + time_day + " " + time_hours + ":" + (time_min + 1) + ":" + time_second;
-					}
-				} else {
-					if(time_min == '59') {
-						var str = time_year + "/0" + time_month + "/" + time_day + " " + (time_hours + 1) + ":" + "0" + ":" + time_second;
-					} else {
-						var str = time_year + "/0" + time_month + "/" + time_day + " " + time_hours + ":" + (time_min + 1) + ":" + time_second;
-					}
-				}
+			//给一个判断，判断到每个小时的最后一分钟之后的时间不要出现不符合规范的时间值，如13:60:10
+			if(time_min == '59') {
+				var str = time_year + "/" + time_month + "/" + time_day + " " + (time_hours + 1) + ":" + "0" + ":" + time_second;
 			} else {
-				if(time_day < 10) {
-					//给一个判断，判断到每个小时的最后一分钟之后的时间不要出现不符合规范的时间值，如13:60:10
-					if(time_min == '59') {
-						var str = time_year + "/" + time_month + "/0" + time_day + " " + (time_hours + 1) + ":" + "0" + ":" + time_second;
-					} else {
-						var str = time_year + "/" + time_month + "/0" + time_day + " " + time_hours + ":" + (time_min + 1) + ":" + time_second;
-					}
-				} else {
-					if(time_min == '59') {
-						var str = time_year + "/" + time_month + "/" + time_day + " " + (time_hours + 1) + ":" + "0" + ":" + time_second;
-					} else {
-						var str = time_year + "/" + time_month + "/" + time_day + " " + time_hours + ":" + (time_min + 1) + ":" + time_second;
-					}
-				}
+				var str = time_year + "/" + time_month + "/" + time_day + " " + time_hours + ":" + (time_min + 1) + ":" + time_second;
 			}
 			break;
 		case 'a_day':
-			if(time_month < 10) {
-				if(time_day < 10) {
-					var str = time_year + "/0" + time_month + "/0" + time_day + " " + "23:59:59";
-				} else {
-					var str = time_year + "/0" + time_month + "/" + time_day + " " + "23:59:59";
-				}
-			} else {
-				if(time_day < 10) {
-					var str = time_year + "/" + time_month + "/0" + time_day + " " + "23:59:59";
-				} else {
-					var str = time_year + "/" + time_month + "/" + time_day + " " + "23:59:59";
-				}
-			}
+			var str = time_year + "/" + time_month + "/" + time_day + " " + "23:59:59";
 			break;
 	}
 
@@ -197,10 +147,10 @@ function show_time() {
 }
 
 function take_post() {
-	//店铺首页发布ID		
-	var sid = '';
-	//店铺首页发布参数 这些值都是通过后台截取	
-	var tbToken = '';
+	//		var sid = $($('#J_TSwitchToOldContent').val()).find('[name="sid"]').attr('value');
+	var sid = '382213577';
+	//	var tbToken = $($('#J_TSwitchToOldContent').val()).find('[name="_tb_token_"]').attr('value');
+	var tbToken = 'e66bde3734ed3';
 	var r = {};
 
 	$.ajax({
