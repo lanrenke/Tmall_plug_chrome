@@ -148,9 +148,9 @@ function show_time() {
 
 function take_post() {
 	//		var sid = $($('#J_TSwitchToOldContent').val()).find('[name="sid"]').attr('value');
-	var sid = '382213577';
+	var sid = '';
 	//	var tbToken = $($('#J_TSwitchToOldContent').val()).find('[name="_tb_token_"]').attr('value');
-	var tbToken = 'e66bde3734ed3';
+	var tbToken = '';
 	var r = {};
 
 	$.ajax({
