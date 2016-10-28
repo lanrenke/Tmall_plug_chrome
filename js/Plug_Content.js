@@ -49,7 +49,7 @@ $(document).on('click', '#set_time', function() {
 			if(time_min == '59') {
 				var str = time_year + "/" + time_month + "/" + time_day + " " + (time_hours + 1) + ":" + "0" + ":" + time_second;
 			} else {
-				var str = time_year + "/" + time_month + "/" + time_day + " " + time_hours + ":" + (time_min + 1) + ":" + time_second;
+				var str = time_year + "/" + time_month + "/" + time_day + " " + time_hours + ":" + (parseFloat(time_min) + 1) + ":" + time_second;
 			}
 			break;
 		case 'a_day':
@@ -148,9 +148,9 @@ function show_time() {
 
 function take_post() {
 	//		var sid = $($('#J_TSwitchToOldContent').val()).find('[name="sid"]').attr('value');
-	var sid = '';
+	var sid = '382213577';
 	//	var tbToken = $($('#J_TSwitchToOldContent').val()).find('[name="_tb_token_"]').attr('value');
-	var tbToken = '';
+	var tbToken = 'e66bde3734ed3';
 	var r = {};
 
 	$.ajax({
